@@ -38,6 +38,9 @@ if proc.returncode != 0:
     print("DDD!!")
     sys.exit(1)
 
+proc = subprocess.Popen('{0} update-index --assume-unchanged {1}'.format(git, my_package.version.__file__), stdout=subprocess.PIPE, shell=True)
+proc.communicate()[0].decode("utf-8").rstrip()
+
 proc = subprocess.Popen('{0} describe --tags'.format(git), stdout=subprocess.PIPE, shell=True)
 version = proc.communicate()[0].decode("utf-8").rstrip()
 
