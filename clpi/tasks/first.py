@@ -22,7 +22,7 @@ class generate_samTask():
         inp_args = self.inp_files[:]
         out_args = self.out_files[:]
 
-        sleep(1000)
+        sleep(1)
         for ele in out_args:
             Path(ele).touch()
 
@@ -44,7 +44,7 @@ class generate_bamTask():
         inp_args = self.inp_files[:]
         out_args = self.out_files[:]
 
-        sleep(1000)
+        sleep(1)
         for ele in out_args:
             Path(ele).touch()
 
@@ -66,7 +66,7 @@ class add_or_replace_read_groupsTask():
         inp_args = self.inp_files[:]
         out_args = self.out_files[:]
 
-        sleep(1000)
+        sleep(1)
         for ele in out_args:
             Path(ele).touch()
 
@@ -93,7 +93,7 @@ mark_duplicates
         inp_args = self.inp_files[:]
         out_args = self.out_files[:]
 
-        sleep(1000)
+        sleep(1)
         for ele in out_args:
             Path(ele).touch()
 
@@ -117,7 +117,7 @@ collect_hs_metrics
         inp_args = self.inp_files[:]
         out_args = self.out_files[:]
 
-        sleep(1000)
+        sleep(1)
         for ele in out_args:
             Path(ele).touch()
 
@@ -141,7 +141,7 @@ collect_alignment_summary_metrics
         inp_args = self.inp_files[:]
         out_args = self.out_files[:]
 
-        sleep(1000)
+        sleep(1)
         for ele in out_args:
             Path(ele).touch()
 

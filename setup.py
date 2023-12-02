@@ -25,7 +25,7 @@ setup(
     description="Clinical Pipeline Skeleton",
     long_description=__doc__,
     fullname="Clinical Pipeline Skeleton (CPS)",
-    name="clpipe",
+    name="clpi",
     python_requires='>=3.10',
     url="",
     version=__version__.split("-")[0],
