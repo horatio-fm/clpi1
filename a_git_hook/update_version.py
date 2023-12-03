@@ -1,5 +1,6 @@
 """
-Generates 'my_package'.version.__file__ which in not in GIT. This is specific for every worktree.
+Generates 'my_package'.version.__file__ which in the GIT repo with attribute 'assume-unchanged'.
+This is specific for every worktree.
 """
 import importlib
 import os
