@@ -32,7 +32,10 @@ setup(
     platforms=["Linux"],
     packages=[
         "clpi",
-        "clpi.bin"
+        "clpi.bin",
+        "clpi.pipes",
+        "clpi.settings",
+        "clpi.tasks",
     ],
     install_requires=pip_requirements(),
     entry_points={
