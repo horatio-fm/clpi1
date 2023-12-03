@@ -9,7 +9,7 @@ import clpi.version
 import clpi as my_package
 
 
-from install_hooks import hook_text_list
+from .install_hooks import hook_text_list
 
 version_file = os.path.join(os.path.dirname(my_package.__file__), "version.py")
 if not os.path.exists(version_file):
