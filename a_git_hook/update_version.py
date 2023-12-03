@@ -4,14 +4,15 @@ This is specific for every worktree.
 """
 import importlib
 import os
+import re
 import subprocess
 import getpass
 import sys
 from pathlib import Path
 
-module_name = "clpi"
+project_name = os.path.basename(os.path.dirname(os.path.dirname(__file__)))
+module_name = re.sub(r'\d+$', '', project_name)
 my_package = importlib.import_module(module_name)
-
 
 from .install_hooks import hook_text_list
 
@@ -40,6 +41,12 @@ if proc.returncode != 0:
 
 proc = subprocess.Popen('{0} update-index --assume-unchanged {1}'.format(git, my_package.version.__file__), stdout=subprocess.PIPE, shell=True)
 proc.communicate()[0].decode("utf-8").rstrip()
+
+proc = subprocess.Popen('{0} rev-list --count HEAD'.format(git), stdout=subprocess.PIPE, shell=True)
+count = proc.communicate()[0].decode("utf-8").rstrip()
+
+if count == "1":
+    proc = subprocess.Popen('{0} tag v0.0.0'.format(git), stdout=subprocess.PIPE, shell=True)
 
 proc = subprocess.Popen('{0} describe --tags'.format(git), stdout=subprocess.PIPE, shell=True)
 version = proc.communicate()[0].decode("utf-8").rstrip()

@@ -28,7 +28,7 @@ setup(
     name="clpi",
     python_requires='>=3.10',
     url="",
-    version=__version__.split("-")[0],
+    version=__version__.split("__")[0],
     platforms=["Linux"],
     packages=[
         "clpi",
