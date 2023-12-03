@@ -10,4 +10,5 @@ push-to-deploy
 
 It is in the repository but has attribute 'assume-unchanged'. It is specific for every worktree.
 """
-version = 'v0.0.0-17-0a5e2c6__2023-12-03_01-52-50_-0600__master'
+
+version = 'v0.0.0-19-e1cb002__2023-12-03_10-01-30_-0600__master'
